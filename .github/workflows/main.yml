@@ -70,6 +70,10 @@ jobs:
   BUILD_AND_PUBLISH:
     needs: Testing
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./application
     steps:
       - name: Code checkout 
         uses: actions/checkout@v4
