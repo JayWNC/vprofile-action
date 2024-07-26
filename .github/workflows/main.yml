@@ -5,7 +5,13 @@ on:
       - main
       - stage 
     paths:
-      -
+      - application/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - application/**
+
 env:
   AWS_REGION: ap-southeast-1
   ECR_REPOSITORY: vprofilewise31
